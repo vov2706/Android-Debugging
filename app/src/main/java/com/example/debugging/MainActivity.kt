@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         logging()
+        division()
+        first()
     }
 
     private fun logging() {
@@ -19,5 +21,33 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "INFO: reporting technical information, such as an operation succeeding")
         Log.d(TAG, "DEBUG: reporting technical information useful for debugging")
         Log.v(TAG, "VERBOSE: more verbose than DEBUG logs")
+    }
+
+    private fun division() {
+        val numerator = 60
+        var denominator = 4
+        repeat(5) {
+            Log.v(TAG, "${numerator / denominator}")
+            denominator--
+        }
+    }
+
+    private fun first() {
+        second()
+        Log.v(TAG, "1")
+    }
+
+    private fun second() {
+        third()
+        Log.v(TAG, "2")
+        fourth()
+    }
+
+    private fun third() {
+        Log.v(TAG, "3")
+    }
+
+    private fun fourth() {
+        Log.v(TAG, "4")
     }
 }
